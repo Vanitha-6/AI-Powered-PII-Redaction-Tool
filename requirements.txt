@@ -1,0 +1,14 @@
+If you already have your virtual environment active (where you installed Flask, OpenCV, etc.), run:
+
+pip freeze > requirements.txt
+
+
+This will create a file named requirements.txt in your project folder with all dependencies, for example:
+
+Flask==3.0.3
+opencv-python==4.10.0.84
+pytesseract==0.3.13
+spacy==3.7.5
+ultralytics==8.3.0
+Pillow==10.4.0
+numpy==2.1.1

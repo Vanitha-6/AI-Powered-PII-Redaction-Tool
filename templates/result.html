@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redaction Results</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #fce4ec, #e3f2fd);
+      color: #333;
+    }
+    header {
+      padding: 25px;
+      background:cadetblue;
+      color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    header h2 { margin: 0; font-size: 2em; }
+
+    .images {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin: 40px auto;
+    }
+    .card {
+      background:white;
+      border-radius: 12px;
+      padding: 20px;
+      width: 40%;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+    h3 { margin-bottom: 15px; color:darkslategray; }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      background:cadetblue;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 1em;
+      transition: background 0.3s;
+    }
+    .btn:hover { background:cadetblue; }
+    footer {
+      margin-top: 40px;
+      padding: 15px;
+      background: #f0f0f0;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Redaction Complete</h2>
+    <p>Your sensitive information has been securely removed.</p>
+  </header>
+
+  <div class="images">
+    <div class="card">
+      <h3>Original</h3>
+      <img src="/uploads/{{ original }}" alt="Original Document">
+    </div>
+
+    <div class="card">
+      <h3>Redacted</h3>
+      <img src="/outputs/{{ redacted }}" alt="Redacted Document">
+    </div>
+  </div>
+
+  <a href="/download/{{ redacted }}" class="btn">📥 Download Redacted Image</a>
+
+  
+</body>
+</html>

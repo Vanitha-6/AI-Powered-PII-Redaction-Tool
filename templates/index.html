@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PII Redactor</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color:lightgrey;
+      color: #333;
+    }
+    header {
+      padding: 30px;
+      background-color:cadetblue;
+      color:#333;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    header h1 { margin: 0;  font-size: 2.2em; }
+    header p { margin-top: 10px; font-size: 1.1em; }
+
+    .container {
+      margin-top: 50px;
+      background: white;
+      border-radius: 12px;
+      padding: 40px;
+      display: inline-block;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .container:hover { transform: translateY(-5px); }
+
+    input[type="file"] {
+      margin: 20px;
+      padding: 10px;
+      border: 2px solid cadetblue;
+      border-radius: 8px;
+      background: #f9f9f9;
+      width: 80%;
+    }
+    button {
+      background: cadetblue;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover { background: #005fa3; }
+    footer {
+      margin-top: 50px;
+      padding: 15px;
+      background: #f0f0f0;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body >
+  <header>
+    <h1>AI-Powered PII Redaction Tool</h1>
+    <p>Upload a document image and protect your privacy by removing <b>Names, Dates, and Signatures</b>.</p>
+  </header>
+
+  <div class="container">
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="file" accept="image/png, image/jpeg" required>
+      <br>
+      <button type="submit">🚀 Upload & Redact</button>
+    </form>
+  </div>
+
+</body>
+</html>
