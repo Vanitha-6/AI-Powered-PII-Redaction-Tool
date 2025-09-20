@@ -54,6 +54,11 @@ def uploaded_file(filename):
 def output_file(filename):
     return send_from_directory(OUTPUT_FOLDER, filename)
 
-
+# Download redacted file
+@app.route("/download/<filename>")
+def download(filename):
+    path = os.path.join(OUTPUT_FOLDER, filename)
+    return send_file(path, as_attachment=True)
+    
 if __name__ == "__main__":
     app.run(debug=True)
